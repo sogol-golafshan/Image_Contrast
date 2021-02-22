@@ -3,7 +3,6 @@ import numpy as np
 import cv2
 import os
 import glob
-folder="/Users/sogol/PycharmProjects/contrast/cats"
 
 def image2d_contrast_augmentation(image_array, **kwargs):
     """Takes image array as an input. Outputs contrasted image array."""
@@ -19,11 +18,9 @@ def image2d_contrast_augmentation(image_array, **kwargs):
     CLAHE_img = cv2.cvtColor(updated_lab_img2, cv2.COLOR_LAB2BGR)
     return CLAHE_img
 
-images = [cv2.imread(file) for file in glob.glob("/Users/sogol/PycharmProjects/contrast/cats/*.png")]
-
 if __name__ == "__main__":
 """Takes an array of Image. Output is contrasted array."""
-    img_array = cv2.imread("dog.jpg", 1)
+    #img_array = cv2.imread("dog.jpg", 1)
     image_array_1 = cv2.resize(img_array, dsize=(5, 5), interpolation=cv2.INTER_CUBIC)
     image_array = np.array([[[122, 184, 168],
         [133, 198, 182],
