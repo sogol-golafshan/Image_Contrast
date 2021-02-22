@@ -49,10 +49,7 @@ if __name__ == "__main__":
         [ 76, 147, 132],
         [106, 148, 170],
         [196, 228, 247],
-        [ 59, 126, 122]]], dtype = np.uint8)
+        [ 59, 126, 122]]])
+    image_array = np.uint8(image_array)
     image_array_aug = image2d_contrast_augmentation(image_array, clipLimit=30, tileGridSize=(8, 8))
-    print('image_array:\n', image_array)
-    print('\nimage_array_aug:\n',image_array_aug)
-    print(image_array_aug.shape)
-    print(image_array_aug.ndim)
-    print(type(image_array))
+    
